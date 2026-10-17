@@ -1,0 +1,10 @@
+
+name: FoodNfo
+description: A terminal tool for food nutrition information.
+version: 0.1.0
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  http: ^1.6.0
