@@ -12,6 +12,7 @@ Future<dynamic> searchFoods(String foodName, String apiKey) async {
     body: jsonEncode({
       'query': foodName,
       'dataType': ['Foundation', 'SR Legacy'],
+      'requireAllWords': true,
       'pageSize': 1,
     }),
   );

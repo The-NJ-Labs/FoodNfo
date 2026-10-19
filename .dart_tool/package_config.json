@@ -26,10 +26,22 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "json_annotation",
+      "rootUri": "file:///C:/Users/Asus/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.12.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.9"
+    },
+    {
       "name": "meta",
       "rootUri": "file:///C:/Users/Asus/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.19.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
+    },
+    {
+      "name": "openfoodfacts",
+      "rootUri": "file:///C:/Users/Asus/AppData/Local/Pub/Cache/hosted/pub.dev/openfoodfacts-3.31.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.11"
     },
     {
       "name": "path",
@@ -75,8 +87,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.11.0",
+  "generatorVersion": "3.13.5",
   "flutterRoot": "file:///C:/Users/Asus/Framework/flutter",
-  "flutterVersion": "3.41.2",
+  "flutterVersion": "3.47.7",
   "pubCache": "file:///C:/Users/Asus/AppData/Local/Pub/Cache"
 }

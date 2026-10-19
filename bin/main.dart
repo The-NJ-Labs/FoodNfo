@@ -1,26 +1,37 @@
-import "dart:io";
+import 'dart:io';
+import 'package:openfoodfacts/openfoodfacts.dart';
 import '../lib/src/input.dart';
-import '../lib/src/usda.dart';
+import '../lib/src/openfoodfacts.dart';
 
 Future<void> main() async {
-  final apiKey = Platform.environment['USDA_API_KEY'];
-
-  if (apiKey == null || apiKey.isEmpty) {
-    print("USDA API key not set...");
-    return;
-  }
-
   final foodName = await askFoodName();
 
+  OpenFoodAPIConfiguration.userAgent = UserAgent(
+    name: 'FoodNfo',
+    version: '0.2',
+    system: Platform.operatingSystem,
+  );
+
   if (foodName == null || foodName.isEmpty) {
-    print("No food name entered...");
+    print('No product name entered.');
     return;
   }
 
   try {
-    final JsonData = await searchFoods(foodName, apiKey);
-    print(JsonData);
+    final product = await findThatFreakinProduct(foodName);
+
+    if (product == null) {
+      print('No product found...');
+      return;
+    }
+
+    print('\nSelected product:');
+    print('Name: ${product.productName}');
+    print('Brand: ${product.brands}');
+    print('Barcode: ${product.barcode}');
+    print('Country: ${product.countries}');
+    print('Ingredients: ${product.ingredientsText}');
   } catch (e) {
-    print("Error: $e");
+    print('Search failed: $e');
   }
 }

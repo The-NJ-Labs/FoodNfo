@@ -8,3 +8,4 @@ environment:
 
 dependencies:
   http: ^1.6.0
+  openfoodfacts: ^3.31.0

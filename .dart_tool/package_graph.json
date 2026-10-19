@@ -7,9 +7,20 @@
       "name": "FoodNfo",
       "version": "0.1.0",
       "dependencies": [
-        "http"
+        "http",
+        "openfoodfacts"
       ],
       "devDependencies": []
+    },
+    {
+      "name": "openfoodfacts",
+      "version": "3.31.0",
+      "dependencies": [
+        "http",
+        "json_annotation",
+        "meta",
+        "path"
+      ]
     },
     {
       "name": "http",
@@ -22,13 +33,25 @@
       ]
     },
     {
-      "name": "web",
-      "version": "1.1.1",
+      "name": "meta",
+      "version": "1.19.0",
       "dependencies": []
     },
     {
-      "name": "meta",
-      "version": "1.19.0",
+      "name": "path",
+      "version": "1.9.1",
+      "dependencies": []
+    },
+    {
+      "name": "json_annotation",
+      "version": "4.12.0",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
       "dependencies": []
     },
     {
@@ -80,11 +103,6 @@
     {
       "name": "term_glyph",
       "version": "1.2.2",
-      "dependencies": []
-    },
-    {
-      "name": "path",
-      "version": "1.9.1",
       "dependencies": []
     }
   ],
